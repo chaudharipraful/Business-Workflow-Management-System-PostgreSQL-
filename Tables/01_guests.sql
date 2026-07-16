@@ -1,0 +1,18 @@
+CREATE TABLE guests(
+	guest_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	title VARCHAR(50) NOT NULL,
+	first_name VARCHAR(100) NOT NULL,
+	last_name VARCHAR (100) NOT NULL,
+	email VARCHAR(100) UNIQUE NOT NULL,
+	mobile VARCHAR(50) UNIQUE NOT NULL,
+	whatsapp VARCHAR(50),
+	country VARCHAR(50) NOT NULL,
+	nationality VARCHAR(50) NOT NULL,
+	created_date DATE DEFAULT CURRENT_DATE
+);
+
+DROP TABLE guests;
+
+SELECT *
+FROM guests;
+ 
